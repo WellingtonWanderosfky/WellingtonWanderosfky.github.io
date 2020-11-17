@@ -55,3 +55,21 @@ a{
     font-size: 16px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+
+.exercicio{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color:#45c049; /* Green */
+    color: white;
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.exercicio:hover {
+    background-color: rgb(255, 0, 0); 
+    color: white;
+}
