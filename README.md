@@ -1,1 +1,0 @@
-# WellingtonWanderosfky.github.io

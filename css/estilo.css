@@ -73,3 +73,13 @@ a{
     background-color: rgb(255, 0, 0); 
     color: white;
 }
+
+.centro
+{
+    text-align: center;
+}
+
+.margem 
+{
+    margin-left: 10px;
+}
