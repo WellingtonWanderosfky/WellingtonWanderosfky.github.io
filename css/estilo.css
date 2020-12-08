@@ -69,6 +69,10 @@ a{
     font-size: 16px;
 }
 
+div.quadrado{
+    text-decoration: none;
+}
+
 .exercicio:hover {
     background-color: rgb(255, 0, 0); 
     color: white;
