@@ -36,7 +36,7 @@ function chamaGRAMA()
 function agua()
 {
 	var grama_h2 =2; 
-	var grama_O2 =16;
+	var grama_O2 =32;
 	var grama_H2O =18;
 	var valor = document.getElementById("valor").value;
 	valor =  parseFloat(valor);
@@ -63,7 +63,7 @@ function agua()
 	if(reagente == "O2" && reagente2 == "H2O")
 	{
 		var conta1 = valor * grama_H2O;
-		var result=  conta1 / grama_O2; 
+		var result=  conta1 / (grama_O2/2); 
 		
 		resultado = valor + " gO2 - xgH2O" + " <br> 16gO2 - 18gH2O" +  
 		"<br> <br> " + valor + " gO2 * 18gH2O" + " <br> XgH2O * 16gO2 <br> <br> O resultado é: " + valor + " gO2 - " + result + " gH2O" ;
@@ -73,7 +73,7 @@ function agua()
 	if(reagente == "O2" && reagente2 == "H2")
 	{
 		var conta1 = valor * grama_h2;
-		var result=  conta1 / grama_O2; 
+		var result=  conta1 / (grama_O2/2); 
 		
 		resultado = valor + " gO2 - xgH2" + " <br> 16gO2 - 2gH2" +  
 		"<br> <br> " + valor + " gO2 * 2gH2" + " <br> XgH2 * 16gO2 <br> <br> O resultado é: " + valor + " gO2 - " + result + " gH2" ;
