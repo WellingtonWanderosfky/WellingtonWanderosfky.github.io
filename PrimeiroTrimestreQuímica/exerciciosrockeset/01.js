@@ -120,7 +120,7 @@ function limitante()
 	{
 		resultado = "2g H2 - 16g O2 <br>" +  h2 + " gH2 -  xg O2 <br><br><br> 2g H2 X XgO2 = " + h2 +" gH2 X 16g O2  <br><br> Xg O2 = " + conta4 + " <br> Portanto para " + h2 + " gH2 é necessário " + conta4 + " gO2";
 		temp_excesso = o2 - conta4;
-		resultado += "<br> <h3>O2 está em excesso e o h2 é o limitante e o excesso de O2g é: " + temp_excesso + " gO2 <br> o H2O formado é :" + contah2o +" gH2O</h3>";
+		resultado += " <br> <h3>O2 está em excesso e o h2 é o limitante e o excesso de O2g é: " + temp_excesso + " gO2 <br> o H2O formado é :" + contah2o +" gH2O</h3>";
 		}
 
 
