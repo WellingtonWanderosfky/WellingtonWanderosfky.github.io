@@ -17,10 +17,10 @@
 				let generoDoLivro = $("#genero").val();
 				let autorDoLivro = $("#autor").val();
 				$("#acervo").append($("<tr>").addClass("livro")
-					.append($("<td>").text(tituloLivro)).addClass("titulo")
-					.append($("<td>").text(descricaoDoLivro)).addClass("descricao")
-					.append($("<td>").text(generoDoLivro)).addClass("genero")
-					.append($("<td>").text(autorDoLivro)).addClass("autor")
+					.append($("<td>").text(tituloLivro))
+					.append($("<td>").text(descricaoDoLivro))
+					.append($("<td>").text(generoDoLivro))
+					.append($("<td>").text(autorDoLivro))
 					.append($("<td>").append($("<img>").attr('src', 'lixeira.png'))));
 				$("#titulo").val("");
 				$("#descricao").val("");
