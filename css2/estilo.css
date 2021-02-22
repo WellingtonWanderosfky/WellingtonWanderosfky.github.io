@@ -47,6 +47,12 @@ a{
     font-size: 16px;
 }
 
+
+.maior{
+    width: 400px;
+}
+
+
 .titulo {
     background-color: #100133; /* Green */
     color: white;
