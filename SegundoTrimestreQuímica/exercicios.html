@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Wellington Wanderosfky Pedro</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="../assets/css/copia02.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(function () {
+			$("#botao1").click(function () {
+				if ($("#b").prop("checked") == true) {
+					$("#resultado").text("Resposta Correta!")
+					$(".A1").css("color", "red");
+					$(".B1").css("color", "green");
+					$(".C1").css("color", "red");
+					$(".D1").css("color", "red");
+					$(".E1").css("color", "red");
+				}
+
+				else {
+					$("#resultado").text("A correta era a letra b")
+					$(".A1").css("color", "red");
+					$(".B1").css("color", "green");
+					$(".C1").css("color", "red");
+					$(".D1").css("color", "red");
+					$(".E1").css("color", "red");
+				}
+			});
+			$("#botao2").click(function () {
+				if ($("#d2").prop("checked") == true) {
+					$("#resultado2").text("Resposta Correta!")
+					$(".A2").css("color", "red");
+					$(".B2").css("color", "red");
+					$(".C2").css("color", "red");
+					$(".D2").css("color", "green");
+					$(".E2").css("color", "red");
+				}
+
+				else {
+					$("#resultado2").text("A correta era a letra D")
+					$(".A2").css("color", "red");
+					$(".B2").css("color", "red");
+					$(".C2").css("color", "red");
+					$(".D2").css("color", "green");
+					$(".E2").css("color", "red");
+				}
+			});
+
+			$("#botao3").click(function () {
+				if ($("#d3").prop("checked") == true) {
+					$("#img3").attr('src', "../images/2(15).gif")
+					$("#resultado3").text("Resposta Correta!")
+					$(".A3").css("color", "red");
+					$(".B3").css("color", "red");
+					$(".C3").css("color", "red");
+					$(".D3").css("color", "green");
+					$(".E3").css("color", "red");
+				}
+
+				else {
+					$("#resultado3").text("A correta era a letra D")
+					$(".A3").css("color", "red");
+					$(".B3").css("color", "red");
+					$(".C3").css("color", "red");
+					$(".D3").css("color", "green");
+					$(".E3").css("color", "red");
+				}
+			});
+
+			$("#limpar1").click(function () {
+				$("#img3").attr('src', "")
+				$("#resultado3").text("")
+				$(".A3").css("color", "black");
+				$(".B3").css("color", "black");
+				$(".C3").css("color", "black");
+				$(".D3").css("color", "black");
+				$(".E3").css("color", "black");
+			});
+
+			$("#limpar2").click(function () {
+				$("#resultado3").text("")
+				$(".A1").css("color", "black");
+				$(".B2").css("color", "black");
+				$(".C2").css("color", "black");
+				$(".D2").css("color", "black");
+				$(".E2").css("color", "black");
+			});
+
+			$("#limpar3").click(function () {
+				$("#resultado3").text("")
+				$(".A2").css("color", "black");
+				$(".B2").css("color", "black");
+				$(".C2").css("color", "black");
+				$(".D2").css("color", "black");
+				$(".E2").css("color", "black");
+			});
+
+		});
+	</script>
+</head>
+
+<body class="landing">
+	<header id="header" class="alt">
+		<h1 class="center">Exercícios</h1>
+		<nav id="nav">
+			<ul>
+				<li><a href="index.html">Início</a></li>
+			</ul>
+		</nav>
+	</header>
+
+
+
+	<!-- Banner -->
+	<section id="banner">
+		<h2>QUÍMICA </h2>
+		<p> GASES</p>
+		<br>
+		<br>
+		<br>
+	</section>
+	<hr>
+	<section id="one" class="wrapper style1">
+		<div class="container 75%">
+			<div class="row 200%">
+				<div class="6u 12u$(medium)">
+					<p class="alinhado">
+					<h1>01. (MACKENZIE) Se a pressão de um gás confinado é duplicada à temperatura constante, a grandeza
+						do gás que duplicara será:</h1>
+					<form>
+						<p id="resultado"></p>
+						<p class="A1"><input type="radio" id="a" name="alt" value="A2"> a) a massa<br></p>
+						<p class="B1"><input type="radio" id="b" name="alt" value="B2"> b) a massa específica<br></p>
+						<p class="C1"><input type="radio" id="c" name="alt" value="C2"> c) o volume<br></p>
+						<p class="D1"><input type="radio" id="d" name="alt" value="D2"> d) o peso<br></p>
+						<p class="E1"><input type="radio" id="e" name="alt" value="E2"> e) a energia cinética<br><br>
+						</p>
+						<button type="button" id="botao1" class="btn">Ver resposta</button>
+						<button type="button" id="limpar2" class="btn">Limpar</button>
+						<div id="r">
+						</div>
+					</form>
+					</p>
+					</header>
+				</div>
+				<div class="6u$ 12u$(medium)">
+					<p class="alinhado">
+					<h1>02. (UF-AC) Qual deve ser a temperatura de certa quantidade de um gás ideal, inicialmente a 200
+						K, para
+						que
+						tanto o volume quanto a pressão dupliquem?</h1>
+					<form>
+						<p id="resultado2"></p>
+						<p class="A2"><input type="radio" id="a2" name="alt" value="A3"> a) 1200 K<br></p>
+						<p class="B2"><input type="radio" id="b2" name="alt" value="B3"> b) 2400 K<br></p>
+						<p class="C2"><input type="radio" id="c2" name="alt" value="C3"> c) 400 K<br></p>
+						<p class="D2"><input type="radio" id="d2" name="alt" value="D3"> d) 800 K<br></p>
+						<p class="E2"><input type="radio" id="e2" name="alt" value="E3"> e) n.d.a<br><br></p>
+						<button type="button" id="botao2" class="btn">Ver resposta</button>
+						<button type="button" id="limpar3" class="btn">Limpar</button>
+
+						<div id="r">
+						</div>
+					</form>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<hr>
+	<section id="one" class="wrapper style1">
+		<div class="container 75%">
+			<div class="row 200%">
+				<div class="6u 12u$(medium)">
+
+					<p class="alinhado">
+					<h1>03. (UFU-MG) As grandezas que definem completamente o estado de um gás são:</h1>
+					<form>
+						<p id="resultado3"></p>
+						<img id="img3">
+						<p class="A3"><input type="radio" id="a3" name="alt" value="A3"> a) somente pressão e volume<br>
+						</p>
+						<p class="B3"><input type="radio" id="b3" name="alt" value="B3"> b) apenas o volume e a
+							temperatura.<br></p>
+						<p class="C3"><input type="radio" id="c3" name="alt" value="C3"> c) massa e volume.<br></p>
+						<p class="D3"><input type="radio" id="d3" name="alt" value="D3"> d) temperatura, pressão e
+							volume.<br></p>
+						<p class="E3"><input type="radio" id="e3" name="alt" value="E3"> e) massa, pressão, volume e
+							temperatura.br><br></p>
+						<button type="button" id="botao3" class="btn">Ver resposta</button>
+						<button type="button" id="limpar1" class="btn">Limpar</button>
+						<div id="r">
+						</div>
+					</form>
+					</p>
+					</header>
+				</div>
+			</div>
+		</div>
+	</section>
+	<hr>
+
+
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="container">
+			<ul class="icons">
+			</ul>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+
+</body>
+
+</html>
