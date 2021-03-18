@@ -1,0 +1,88 @@
+		  /** Wellington**/
+	.catalogo{
+		width:30%;
+  		padding: 50px;
+  		box-sizing: border-box;
+  		margin-left: 1.5%;
+  		margin-right: 1.5%;
+  		display: inline-block;
+  		background-color: #17143f;
+  		border-radius: 5px;
+  		height: 600px;
+  		margin-top: 5px;
+  		margin-bottom: 5px;
+  	} 
+  	.figura{
+ 		width: 276px; 
+ 		height:159px;
+	}
+	.titulo{
+		font-family: 'Open Sans Condensed', sans-serif;
+		color: white;
+	}
+	p, h1, h4, li{
+		font-family: 'Open Sans Condensed', sans-serif;
+		color: white;
+	}
+	.classificacao{
+		width: 20px;
+ 		height: 20px;
+	}
+	.estrela{
+		width: 85px;
+ 		height: 25px;
+ 		margin-left: 15px;	
+	}
+	.sinopse{
+		font-size: 16px;
+		font-weight: bold;
+	}
+	.generos{
+		font-size: 12.5px;
+	}
+	.elenco{
+		font-size: 14px;
+	}
+	.semelhantes{
+		display: inline-block;
+		font-size: 14px;
+	}
+	.ts{
+		font-size: 14px;
+		margin-bottom: 1px;
+	}
+	.figura{
+ 		width: 100%; 
+ 		height: auto;
+	}
+	.retorno{
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+		background-color: #45c049; /* Green */
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		margin: 10px;
+		display: inline-block;
+		border-radius: 10px;
+		font-size: 16px;
+	}
+	
+	.pincipal{
+		display: flex;
+		flex-wrap: wrap;
+		padding-top: 5px;
+		background-color:  #1d2f2f;
+	}
+	body{
+		background-color: #1c3030;
+	}
+	.ti+{
+		font-size: 5em;
+		margin: 5px;
+		margin-bottom: 10px;
+		text-align: left;
+		color: #ffffffa8;
+	}
+
+ 
