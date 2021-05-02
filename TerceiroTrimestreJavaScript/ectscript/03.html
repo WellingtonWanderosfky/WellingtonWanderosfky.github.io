@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="01.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../../css2/estilo.css" media="screen" />
+    <script>
+        $(function () {
+            $("#go").click(function () {
+                let texto_array = $("#texto_array").val();
+                texto_array = texto_array.replace(/\s+/g, '');
+                let array = texto_array.split(",");
+                let tam = array.length;
+                if (array[tam - 1] == "") {
+                    array.pop();
+                }
+                $("#resultado").html("<br>Duplicados " + elemento_duplicado(array) + "<br> pares: " + array_par(array) + "<br> Soma dos elementos: " + soma(array));
+            })
+            //LIMPAR CAIXA
+            $("#sem_repetir").click(function () {
+                $("#resultado").text("");
+                $("#texto_array").val("");
+            })
+            function elemento_duplicado(vetor) {
+                let x = vetor.map(function (num) {
+                    return num * 2;
+                })
+                return x;
+            }
+            //FUNÇÃO DO ARRAY PAR
+            function array_par(vetor) {
+                let x = vetor.filter(function (num) {
+                    return num % 2 == 0;
+                })
+                if (x == "") {
+                    return "Não tem valores pares"
+                }
+                else {
+                    return x;
+                }
+            }
+            //FUNÇÃO DE SOMA
+            function soma(vetor) {
+                let x = vetor.reduce(function (soma, num) {
+                    return parseInt(soma) + parseInt(num);
+                });
+                return x;
+            }
+
+        })
+    </script>
+</head>
+
+<body>
+
+    <p>Implemente uma função double(), que retorne o array com cada um dos elementos duplicado. A função deve usar map.
+        Implemente uma função evenElements(), que retorne um array com apenas os elementos pares do array original. A
+        função deve usar filter.
+        Implemente uma função sum(), que retorne a soma de todos os elementos do array. A função deve usar reduce.</p>
+    <br>
+    <input type="text" id="texto_array" placeholder="Array">
+    <button type="button" id="go">Executar</button>
+    <button type="button" id="sem_repetir">Executar</button>
+    <p id="resultado"></p>
+    <footer>
+        <a class="retorno" href="../primeiro.html">Voltar</a>
+    </footer>
+</body>
+
+</html>
