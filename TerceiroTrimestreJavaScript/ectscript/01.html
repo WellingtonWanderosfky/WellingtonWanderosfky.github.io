@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="01.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="../../css2/estilo.css" media="screen" />
     <script>
+
         $(function () {
             $("#go").click(function () {
                 let texto_array = $("#texto_array").val();
@@ -46,7 +47,11 @@
                 return vetor_sem_repeticao.join(",");
             }
             function ordem_crescente(vetor) {
-                return vetor.sort().join(",");
+                return vetor
+                    .sort(function (a, b) {
+                        return a - b;
+                    })
+                    .join(",");
             }
         })
     </script>
@@ -59,7 +64,7 @@
         ordenar o array numérico (sortNum).</p>
     <br>
     <input type="text" id="texto_array" placeholder="Coloque aqui o array">
-    <button type="button" id="go" >Executar</button>
+    <button type="button" id="go">Executar</button>
     <button type="button" id="sem_repetir">Limpar</button>
     <p id="resultado"></p>
     <footer>
