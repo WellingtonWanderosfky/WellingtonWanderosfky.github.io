@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Wellington Wanderosfky Pedro</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="../assets/css/copia02.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(function () {
+			$("#botao1").click(function(){
+				var solvente = $("#texto01").val();
+				var soluto = $("#texto02").val();
+				suluto = parseFloat(soluto);
+				solvente = parseFloat(solvente);
+				let valorteste = 330 * solvente;
+				if(valorteste > soluto)
+				{
+					$("#resultado").html("1L água - 330g açúcar<br>" + solvente + "L água - Xg açúcar<br> 1 . X = 330 . " + solvente + "<br>X = " + mult1 + "g<br> Era esperado " + mult1 + "g<br>Você forneceu " + soluto + "g,  então <b>solução insaturada.</b>");
+				}
+				if(valorteste < soluto)
+				{
+					$("#resultado").html("1L água - 330g açúcar<br>" + solvente + "L água - Xg açúcar<br> 1 . X = 330 . " + solvente + "<br>X = " + mult1 + "g<br> Era esperado " + mult1 + "g<br>Você forneceu " + soluto + "g,  então <b>solução supersaturada.</b>");
+				}
+				if(valorteste == soluto)
+				{
+					$("#resultado").html("1L água - 330g açúcar<br>" + solvente + "L água - Xg açúcar<br> 1 . X = 330 . " + solvente + "<br>X = " + mult1 + "g<br> Era esperado " + mult1 + "g<br>Você forneceu " + soluto + "g,  então <b>solução saturada.</b>");
+				}
+			})
+		});
+	</script>
+</head>
+
+<body class="landing">
+	<header id="header" class="alt">
+		<h1 class="center">Soluções</h1>
+		<nav id="nav">
+			<ul>
+				<li><a href="index.html">Início</a></li>
+			</ul>
+		</nav>
+	</header>
+	<!-- Banner -->
+	<section id="banner">
+		<h2>QUÍMICA </h2>
+		<p> Soluções</p>
+		<br>
+		<br>
+		<br>
+	</section>
+	<hr>
+	<section id="one" class="wrapper style1">
+		<div class="container 75%">
+			<div class="row 200%">
+				<div class="6u 12u$(medium)">
+					<p class="alinhado">
+					<h1>Classificação de soluções quanto à quantidade de soluto. Água + Açucar</h1>
+					<input type='number' id='texto01' placeholder="Litros de água">
+					<input type='number' id='texto02' placeholder="Açucar em gramas">
+					<form>
+						</p>
+						<button type="button" id="botao1" class="btn">Ver resposta</button>
+						<button type="button" id="limpar2" class="btn">Limpar</button>
+						<div id="r">
+						</div>
+					</form>
+					</p>
+					</header>
+				</div>
+				<p id="resultado"></p>
+
+				<div class="6u$ 12u$(medium)">
+					<p class="alinhado">
+					<h1>02. (UF-AC) Qual deve ser a temperatura de certa quantidade de um gás ideal, inicialmente a 200
+						K, para
+						que
+						tanto o volume quanto a pressão dupliquem?</h1>
+					<form>
+						<p id="resultado2"></p>
+						<p class="A2"><input type="radio" id="a2" name="alt" value="A3"> a) 1200 K<br></p>
+						<p class="B2"><input type="radio" id="b2" name="alt" value="B3"> b) 2400 K<br></p>
+						<p class="C2"><input type="radio" id="c2" name="alt" value="C3"> c) 400 K<br></p>
+						<p class="D2"><input type="radio" id="d2" name="alt" value="D3"> d) 800 K<br></p>
+						<p class="E2"><input type="radio" id="e2" name="alt" value="E3"> e) n.d.a<br><br></p>
+						<button type="button" id="botao2" class="btn">Ver resposta</button>
+						<button type="button" id="limpar3" class="btn">Limpar</button>
+
+						<div id="r">
+						</div>
+					</form>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<hr>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="container">
+			<ul class="icons">
+			</ul>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+
+</body>
+
+</html>
