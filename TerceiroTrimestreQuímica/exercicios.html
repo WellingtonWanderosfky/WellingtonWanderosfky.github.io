@@ -17,18 +17,33 @@
 				let valorteste = 330 * solvente;
 				if(valorteste > soluto)
 				{
-					$("#resultado").html("1L água - 330g açúcar<br>" + solvente + "L água - Xg açúcar<br> 1 . X = 330 . " + solvente + "<br>X = " + mult1 + "g<br> Era esperado " + mult1 + "g<br>Você forneceu " + soluto + "g,  então <b>solução insaturada.</b>");
+					$("#resultado").html("1L água - 330g açúcar<br>" + solvente + "L água - Xg açúcar<br> 1 . X = 330 . " + solvente + "<br>X = " + valorteste + "g<br> O esperado era: " + valorteste + "g<br> Você forneceu :  " + soluto + "g,  então <b>a é solução insaturada.</b>");
 				}
 				if(valorteste < soluto)
 				{
-					$("#resultado").html("1L água - 330g açúcar<br>" + solvente + "L água - Xg açúcar<br> 1 . X = 330 . " + solvente + "<br>X = " + mult1 + "g<br> Era esperado " + mult1 + "g<br>Você forneceu " + soluto + "g,  então <b>solução supersaturada.</b>");
+					$("#resultado").html("1L água - 330g açúcar<br>" + solvente + "L água - Xg açúcar<br> 1 . X = 330 . " + solvente + "<br>X = " + valorteste + "g<br> O esperado era: " + valorteste + "g<br> Você forneceu :  " + soluto + "g,  então <b>a é solução supersaturada.</b>");
 				}
 				if(valorteste == soluto)
 				{
-					$("#resultado").html("1L água - 330g açúcar<br>" + solvente + "L água - Xg açúcar<br> 1 . X = 330 . " + solvente + "<br>X = " + mult1 + "g<br> Era esperado " + mult1 + "g<br>Você forneceu " + soluto + "g,  então <b>solução saturada.</b>");
+					$("#resultado").html("1L água - 330g açúcar<br>" + solvente + "L água - Xg açúcar<br> 1 . X = 330 . " + solvente + "<br>X = " + valorteste + "g<br> O esperado era: " + valorteste + "g<br> Você forneceu :  " + soluto + "g,  então <b>a solução saturada.</b>");
+					
 				}
 			})
-		});
+			$("#botao2").click(function(){
+				let solucao = $("#texto03").val();
+				let soluto = $("#texto04").val();
+				soluto = parseFloat(soluto);
+				solucao = parseFloat(solucao);
+				let transforma_grama_em_mol = soluto/342;
+				let concentracao_molar = transforma_grama_em_mol/solucao;
+				let transforma_mol_em_grama_result = soluto*342;
+				transforma_grama_em_mol = transforma_grama_em_mol.toFixed(3);
+				concentracao_molar = concentracao_molar.toFixed(3);
+				transforma_mol_em_grama_result = transforma_mol_em_grama_result.toFixed(3);
+				$("#resultado2").html(soluto + "g = " + transforma_grama_em_mol +
+					 "mol <br> C = " + transforma_grama_em_mol + "/" + solucao + "<br><b>C = "
+					 + concentracao_molar + "mol/L ou " + transforma_mol_em_grama_result + "g/L<b>");})
+				});
 	</script>
 </head>
 
@@ -64,35 +79,37 @@
 						<button type="button" id="limpar2" class="btn">Limpar</button>
 						<div id="r">
 						</div>
+						<p id="resultado"></p>
 					</form>
 					</p>
 					</header>
 				</div>
-				<p id="resultado"></p>
+			</div>
+		</div>
 
-				<div class="6u$ 12u$(medium)">
+	</section>
+	<section id="one" class="wrapper style1">
+		<div class="container 75%">
+			<div class="row 200%">
+				<div class="6u 12u$(medium)">
 					<p class="alinhado">
-					<h1>02. (UF-AC) Qual deve ser a temperatura de certa quantidade de um gás ideal, inicialmente a 200
-						K, para
-						que
-						tanto o volume quanto a pressão dupliquem?</h1>
+					<h1>Cálculo de concentração em mol. Água + Açucar</h1>
+					<input type='number' id='texto03' placeholder="Litros de água">
+					<input type='number' id='texto04' placeholder="Açucar em gramas">
 					<form>
-						<p id="resultado2"></p>
-						<p class="A2"><input type="radio" id="a2" name="alt" value="A3"> a) 1200 K<br></p>
-						<p class="B2"><input type="radio" id="b2" name="alt" value="B3"> b) 2400 K<br></p>
-						<p class="C2"><input type="radio" id="c2" name="alt" value="C3"> c) 400 K<br></p>
-						<p class="D2"><input type="radio" id="d2" name="alt" value="D3"> d) 800 K<br></p>
-						<p class="E2"><input type="radio" id="e2" name="alt" value="E3"> e) n.d.a<br><br></p>
+						</p>
 						<button type="button" id="botao2" class="btn">Ver resposta</button>
-						<button type="button" id="limpar3" class="btn">Limpar</button>
-
+						<button type="button" id="limpar2" class="btn">Limpar</button>
 						<div id="r">
 						</div>
+						<p id="resultado2"></p>
 					</form>
 					</p>
+					</header>
 				</div>
 			</div>
 		</div>
+
 	</section>
 	<hr>
 
