@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="01.css" media="screen" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../css2/estilo.css"
+      media="screen"
+    />
+    <script>
+      $(function () {
+        $("#go").click(function () {
+          let valor1 = $("#op1").val();
+          let valor2 = $("#op2").val();
+          let operacao = $("#chave").val();
+          $("#resultado").text("Resultado = " + calculadoraope(valor1, valor2, operacao));
+        });
+
+        $("#sem_repetir").click(function () {
+          $("#op1").val("");
+          $("#op2").val("");
+          $("#resultado").text("");
+        });
+
+        function calculadoraope(v1, v2, op) {
+          valor1 = parseFloat(v1);
+          valor2 = parseFloat(v2);
+          switch (op) {
+            case "Soma":
+              return valor1 + valor2;
+              break;
+            case "Subtração":
+              return valor1 - valor2;
+              break;
+            case "Multiplicação":
+              return valor1 * valor2;
+              break;
+            case "Divisão":
+              return valor1 / valor2;
+              break;
+          }
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <p>Calculadora, Coloque os valores e depois a operação.</p>
+    <br />
+    <input type="number" id="op1" placeholder="valor1" />
+    <input type="number" id="op2" placeholder="valor2" />
+    <select id="chave">
+        <option>Soma</option>
+        <option>Subtração</option>
+        <option>Multiplicação</option>
+        <option>Divisão</option>
+      </select>
+    <br />
+    <button type="button" id="go">Executar</button>
+    <button type="button" id="sem_repetir">Limpar</button>
+
+    <p id="resultado"></p>
+    <footer>
+      <a class="retorno" href="../primeiro.html">Voltar</a>
+    </footer>
+  </body>
+</html>

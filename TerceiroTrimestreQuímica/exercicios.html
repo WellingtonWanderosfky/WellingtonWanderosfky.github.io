@@ -17,17 +17,29 @@
 				let valorteste = 330 * solvente;
 				if(valorteste > soluto)
 				{
-					$("#resultado").html("1L água - 330g açúcar<br>" + solvente + "L água - Xg açúcar<br> 1 . X = 330 . " + solvente + "<br>X = " + valorteste + "g<br> O esperado era: " + valorteste + "g<br> Você forneceu :  " + soluto + "g,  então <b>a é solução insaturada.</b>");
+					$("#resultado").html("1L água - 330g açúcar<br>" + solvente + "L água - Xg açúcar<br> 1 . X = 330 . " + solvente + "<br>X = " + valorteste + "g<br> O esperado era: " + valorteste + "g<br> Você forneceu :  " + soluto + "g,  então a é solução insaturada.");
 				}
 				if(valorteste < soluto)
 				{
-					$("#resultado").html("1L água - 330g açúcar<br>" + solvente + "L água - Xg açúcar<br> 1 . X = 330 . " + solvente + "<br>X = " + valorteste + "g<br> O esperado era: " + valorteste + "g<br> Você forneceu :  " + soluto + "g,  então <b>a é solução supersaturada.</b>");
+					$("#resultado").html("1L água - 330g açúcar<br>" + solvente + "L água - Xg açúcar<br> 1 . X = 330 . " + solvente + "<br>X = " + valorteste + "g<br> O esperado era: " + valorteste + "g<br> Você forneceu :  " + soluto + "g,  então a é solução supersaturada.");
 				}
 				if(valorteste == soluto)
 				{
-					$("#resultado").html("1L água - 330g açúcar<br>" + solvente + "L água - Xg açúcar<br> 1 . X = 330 . " + solvente + "<br>X = " + valorteste + "g<br> O esperado era: " + valorteste + "g<br> Você forneceu :  " + soluto + "g,  então <b>a solução saturada.</b>");
+					$("#resultado").html("1L água - 330g açúcar<br>" + solvente + "L água - Xg açúcar<br> 1 . X = 330 . " + solvente + "<br>X = " + valorteste + "g<br> O esperado era: " + valorteste + "g<br> Você forneceu :  " + soluto + "g,  a solução saturada.</b>");
 					
 				}
+			})
+			$("#limpar2").click(function()
+			{
+				$("#texto01").val("");
+				$("#texto02").val("");
+				$("#resultado").html("");
+			})
+			$("#limpar3").click(function()
+			{
+				$("#texto03").val("");
+				$("#texto04").val("");
+				$("#resultado2").html("");
 			})
 			$("#botao2").click(function(){
 				let solucao = $("#texto03").val();
@@ -41,8 +53,8 @@
 				concentracao_molar = concentracao_molar.toFixed(3);
 				transforma_mol_em_grama_result = transforma_mol_em_grama_result.toFixed(3);
 				$("#resultado2").html(soluto + "g = " + transforma_grama_em_mol +
-					 "mol <br> C = " + transforma_grama_em_mol + "/" + solucao + "<br><b>C = "
-					 + concentracao_molar + "mol/L ou " + transforma_mol_em_grama_result + "g/L<b>");})
+					 "mol <br> C = " + transforma_grama_em_mol + "/" + solucao + "<br>C = "
+					 + concentracao_molar + "mol/L ou " + transforma_mol_em_grama_result + "g/L");})
 				});
 	</script>
 </head>
@@ -99,7 +111,7 @@
 					<form>
 						</p>
 						<button type="button" id="botao2" class="btn">Ver resposta</button>
-						<button type="button" id="limpar2" class="btn">Limpar</button>
+						<button type="button" id="limpar3" class="btn">Limpar</button>
 						<div id="r">
 						</div>
 						<p id="resultado2"></p>

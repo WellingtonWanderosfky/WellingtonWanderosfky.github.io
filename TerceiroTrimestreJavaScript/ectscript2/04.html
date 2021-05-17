@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="01.css" media="screen" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../css2/estilo.css"
+      media="screen"
+    />
+    <script>
+      $(function () {
+        $("#go").click(function () {
+          let letras = $("#v1").val();
+          let rotacoes = $("#v2").val();
+          rotacoes = parseInt(rotacoes);
+          $("#resultado").text(misturar(letras, rotacoes));
+        });
+
+        $("#sem_repetir").click(function () {
+          $("#v1").val("");
+          $("#v2").val("");
+          $("#resultado").text("");
+        });
+
+        function misturar(letras, rotacoes) {
+          let array_letras = letras.split("");
+          let array_alfabeto = [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "h",
+            "i",
+            "j",
+            "k",
+            "l",
+            "m",
+            "n",
+            "o",
+            "p",
+            "q",
+            "r",
+            "s",
+            "t",
+            "u",
+            "v",
+            "w",
+            "x",
+            "y",
+            "z",
+          ];
+          let tam_letras = array_letras.length;
+          let tam_alfabeto = array_alfabeto.length;
+          let i = 0;
+          let x = 0;
+          let a;
+          let aux;
+          while (x < tam_letras) {
+            aux = array_letras[x];
+            while (i < tam_alfabeto) {
+              if (array_alfabeto[i] == aux) {
+                if (i + rotacoes > tam_alfabeto) {
+                  a = i + rotacoes - tam_alfabeto;
+                  array_letras[x] = array_alfabeto[a];
+                } else if (i + rotacoes == tam_alfabeto) {
+                  array_letras[x] = array_alfabeto[0];
+                } else {
+                  array_letras[x] = array_alfabeto[i + rotacoes];
+                }
+              }
+              i++;
+            }
+            i = 0;
+            x++;
+          }
+          let string = array_letras.join("");
+          return string;
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <p>
+      ENTRADA = A B C D E F G H I J K L M N O P Q R S T U V W X Y Z SAÍDA = X Y
+      Z A B C D E F G H I J K L M N O P Q R S T U V W Implemente um script que
+      faça isso.
+    </p>
+    <br />
+    <input type="text" id="v1" placeholder="sequência" />
+    <input type="text" id="v2" placeholder="Rotações" />
+
+    <button type="button" id="go">Executar</button>
+    <button type="button" id="sem_repetir">Limpar</button>
+    <p id="resultado"></p>
+    <footer>
+      <a class="retorno" href="../primeiro.html">Voltar</a>
+    </footer>
+  </body>
+</html>

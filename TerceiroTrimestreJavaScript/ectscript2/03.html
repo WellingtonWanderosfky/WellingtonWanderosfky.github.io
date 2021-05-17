@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="01.css" media="screen" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../css2/estilo.css"
+      media="screen"
+    />
+    <script>
+      $(function () {
+        $("#go").click(function () {
+          let lado1 = $("#v1").val();
+          let lado2 = $("#v2").val();
+          let lado3 = $("#v3").val();
+          if (lado1 <= 0 || lado2 <= 0 || lado3 <= 0) {
+            $("#resultado").text(
+              "VALORES INVÁLIDOS"
+            );
+          } else {
+            $("#resultado").text("O " + triangulo(lado1, lado2, lado3));
+          }
+        });
+
+        $("#sem_repetir").click(function () {
+          $("#l1").val("");
+          $("#l2").val("");
+          $("#l3").val("");
+          $("#resultado").text("");
+        });
+
+        function triangulo(l1, l2, l3) {
+          lado1 = parseFloat(l1);
+          lado2 = parseFloat(l2);
+          lado3 = parseFloat(l3);
+          if (cond_existencia_triangulo(lado1, lado2, lado3) == true) {
+            return classificação_triangulo(lado1, lado2, lado3);
+          } else {
+            return "Triângulo não existe.";
+          }
+        }
+
+        function modulo(valor) {
+          if (valor < 0) {
+            valor = valor * -1;
+          }
+          return valor;
+        }
+
+        function cond_existencia_triangulo(lado1, lado2, lado3) {
+          if (
+            (modulo(lado2 - lado3) < lado1 && lado1 < lado2 + lado3) ||
+            (modulo(lado1 - lado3) < lado2 && lado2 < lado1 + lado3) ||
+            (modulo(lado1 - lado2) < lado3 && lado3 < lado1 + lado2)
+          ) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+
+        function classificação_triangulo(lado1, lado2, lado3) {
+          if (lado1 == lado2 && lado1 == lado3 && lado2 == lado3) {
+            return "Triângulo é equilátero.";
+          }
+          if (
+            (lado1 == lado2 && lado1 != lado3) ||
+            (lado2 == lado3 && lado2 != lado1) ||
+            (lado3 == lado1 && lado3 != lado2)
+          ) {
+            return "Triângulo é Isóceles.";
+          }
+          if (lado1 != lado2 && lado1 != lado3 && lado3 != lado2) {
+            return "Triângulo é Escaleno.";
+          }
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <p>
+      O triângulo é uma figura que possui três lados, e dependendo dos valores
+      dos lados sua classificação pode ser equilátero,isósceles e escaleno
+      dependendo se a quantidade de lados iguais forem respectivamente três,
+      dois e nenhum. Contudo, nem toda junção de três tamanhos formam um
+      triângulo válido, por exemplo, os lados 0, 0, 0. Faça um script que
+      verifique as medidas e informe a classificação do triângulo.
+    </p>
+    <br />
+    <input type="text" id="v1" placeholder="lado1" />
+    <input type="text" id="v2" placeholder="lado2" />
+    <input type="text" id="v3" placeholder="lado3" />
+
+    <button type="button" id="go">Executar</button>
+    <button type="button" id="sem_repetir">Limpar</button>
+    <p id="resultado"></p>
+    <footer>
+      <a class="retorno" href="../primeiro.html">Voltar</a>
+    </footer>
+  </body>
+</html>
